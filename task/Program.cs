@@ -11,9 +11,11 @@ Main();
  void Main()
 {
     string [] sa =  Creation(); 
+    Console.WriteLine("Заполненый массив: ");
+    Print(sa);
     string [] rez =  AmtString(sa);
     Console.WriteLine();
-    Console.WriteLine("НОВЫЙ МАССИВ ИЗ СТРОК, ДЛИННА КОТРЫХ МЕНЬШЕ ЛИБО РАВНА 3: ");
+    Console.WriteLine("новый массив из строк, длина которых меньше, либо равна 3: ");
     Print(rez);
 
   
@@ -29,10 +31,7 @@ string [] Creation ()
 
        
     }
-    for(int i =0; i < array.Length; i++ )
-    {
-        Console.Write($"[{array[i]+", "}]");
-    }
+  
 
 return array;
 }
@@ -60,10 +59,11 @@ string [ ] AmtString (string[] ar)
 }
  void Print (string[] stringarray)
  {
+    Console.Write("[");
     for(int i = 0; i < stringarray.Length; i++ )
     {
-        Console.Write($"[{stringarray[i]+", "}]");
+        Console.Write($"{stringarray[i]+", "} ");
     }
-
+    Console.Write("]");
  }
 
